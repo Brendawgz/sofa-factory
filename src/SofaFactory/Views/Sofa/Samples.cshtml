@@ -1,0 +1,20 @@
+﻿@using SofaFactory.ExtensionMethods
+@model IEnumerable<SofaFactory.Models.Sofa>
+
+<div class="row subsection page-header">
+    <div class="col-sm-12">
+        <h1>Configuations Available</h1>
+        <h2>Why compromise? While you can have your lounges <span class="highlight-text">custom-made in configuration, measurement, and colour</span> you like and delivered in <span class="highlight-text">4-6 weeks.</span></h2>
+        @foreach (var batch in Model.Batch(3))
+        {
+            <div class="row">
+                @foreach (var item in batch)
+                {
+                    <div class="col-sm-4">
+                        <img src="@Url.Content(item.ConfigurationImagePath)" style="padding: 1em; width: 100%; height: 100%;"/>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>

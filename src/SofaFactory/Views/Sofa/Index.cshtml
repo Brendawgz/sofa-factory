@@ -1,0 +1,81 @@
+﻿@model IEnumerable<SofaFactory.Models.Sofa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row page-header subsection">
+    <div class="col-sm-12">
+        <h1>Massive Discount Is Still On Now!</h1>
+        <h2><a href="#products-other-info-section">FREE Leather Care Kit</a></h2>
+    </div>
+</div>
+
+@foreach (var sofa in Model)
+{
+    <div class="row sofa-item subsection">
+        <div class="col-sm-7">
+            <a asp-controller="Sofa" asp-action="Measurement" asp-route-id="@sofa.Id">
+                <img src="@Url.Content(sofa.SaleImagePath)" />
+            </a>
+            <div class="sofa-item-links-left">
+                <h4><a asp-controller="Sofa" asp-action="Measurement" asp-route-id="@sofa.Id">Detailed Measurements</a></h4>
+                <h4><a asp-controller="Sofa" asp-action="Samples">Custom Configurations</a></h4>
+            </div>
+            <div class="sofa-item-links-right">
+                <h4><a href="#products-other-info-section">Upgrade Options, Colors, FAQ and Warranty</a></h4>
+                <h4><a asp-controller="Home" asp-action="Tips">Tips When Buying Leather Sofas</a></h4>
+            </div>
+        </div>
+        <div class="col-sm-4 col-sm-offset-1 sofa-item-info">
+            <h2><u>@sofa.ProductCode</u></h2>
+            <h2>@sofa.Material</h2>
+            <h2>@sofa.Features</h2>
+            <span style="text-decoration: line-through; color: red;">
+                <h2 style="color: #333">$@sofa.OriginalPrice</h2>
+            </span>
+            <h2 style="color: red"><b>$@sofa.Price</b></h2>
+            <br />
+            <h2><a href="#products-other-info-section">Get Your Free Leather Care Kit</a></h2>
+            <br />
+            <h2><a asp-controller="Sofa" asp-action="Samples">Custom Jobs Are Available!</a></h2>
+        </div>
+    </div>
+}
+<div class="row subsection" id="products-other-info-section">
+    <div class="col-sm-12">
+        <h2>Upgrade Options, Colors, FAQ and Warranty</h2>
+        <h4><u>To receive your FREE Leather Care Kit, please email photos of the delivered lounges to bowen@leathersofa.com.my</u></h4>
+        <div class="pull-left" style="padding-right: 7.5em">
+            <h3><u>Upgrade Options</u>
+            </h3>
+            <h4>Electric $100/Seat</h4>
+            <h4>Rocking $30/Recliner</h4>
+            <h4>Rocking/Swivelling $60/Recliner</h4>
+        </div>
+        <div class="pull-left">
+            <h3><u>Colors</u>
+            </h3>
+            <h4>Dark Brown, Black, White, Beige, Stone, Cream (In-house)</h4>
+            <h4><a asp-controller="Home" asp-action="Color">More Color Choices...</a></h4>
+        </div>
+        <div style="clear: left"></div>
+        <div class="pull-left" style="padding-right: 5em">
+            <h3><u>Payment Methods</u>
+            </h3>
+            <h4>$300 Deposit for Standard Order</h4>
+            <h4>$600 Deposit for Special Order</h4>
+            <h4>(Cash, Visa, Master, EFTPOS)</h4>
+            <h4>Balance in Cash Only Upon Delivery</h4>
+        </div>
+        <div class="pull-left">
+            <h3><u>Manufactures' Warranty</u>
+            </h3>
+            <h4>10 Years Internal Structure Waranty</h4>
+            <h4>3 Years Foam Waranty (Please refer to FAQ 10)</h4>
+            <h4>3 Years Leather and Mechanism Warranty</h4>
+        </div>
+        <div style="clear: left"></div>
+        <h3><a asp-controller="Home" asp-action="FAQ">View FAQ</a></h3>
+    </div>
+</div>

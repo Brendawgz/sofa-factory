@@ -1,0 +1,10 @@
+﻿@model SofaFactory.Models.Sofa
+
+<div class="row subsection">
+    <div class="col-sm-12">
+        <h1 style="padding-left: 1em"><u>@Model.ProductCode</u></h1>
+        <img src="@Url.Content(Model.MeasurementImagePath)" style="padding: 1em; width: 100%"/>
+        <h1 style="text-align: right"><a asp-controller="Sofa" asp-action="Index">Back To Products</a>
+        </h1>
+    </div>
+</div>

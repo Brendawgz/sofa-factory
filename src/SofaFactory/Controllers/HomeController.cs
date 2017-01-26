@@ -13,17 +13,27 @@ namespace SofaFactory.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Tips()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
+        public IActionResult FAQ()
+        {
+            return View();
+        }
+
+        public IActionResult Color()
+        {
+            return View();
+        }
+
+        public IActionResult Clearance()
+        {
+            return View();
+        }
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
