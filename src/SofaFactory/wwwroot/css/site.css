@@ -1,38 +1,210 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿@media (max-device-width:768px) {
+    /*Global CSS*/
+    .navbar-default .navbar-nav > .active > a {
+        border-bottom: 5px solid #C25462;
+    }
+
+     /* Homepage CSS */
+    .carousel-caption, .carousel-caption h2, .carousel-caption button {
+        top: 20%;
+        transform: translateY(-20%);
+    }
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+@media (min-device-width:769px) {
+    /*Global CSS*/
+    .navbar {
+        height: 6em;
+        overflow: hidden;
+        padding: 1.4em;
+    }
+
+    .navbar-default .navbar-nav > .active {
+        background: transparent;
+        border-bottom: 5px solid white;
+        transition: border-bottom 1s; 
+     }
+
+     .navbar-default .navbar-nav > .active > a, 
+     .navbar-default .navbar-nav > .active > a:hover, 
+     .navbar-default .navbar-nav > .active > a:focus {
+        background: transparent;
+     }
+
+     .nav li a:hover {
+        background: transparent;
+    }
+
+     .navbar-header .brand {
+        color: white;
+    }
+
+     /* Homepage Navigation Bar CSS */
+     .unscrolled {
+        border: none !important;
+        background: transparent;
+    }
+
+    .unscrolled li a, .navbar-header li a {
+        color: white !important;
+        text-decoration:none;
+    }
+
+    .unscrolled .inactive a:hover {
+        border-bottom: 5px solid white !important;
+    }
+
+    .scrolled {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .scrolled li a, .navbar-header li a {
+        color: gray !important;
+        text-decoration:none;
+    }
+
+    .scrolled .inactive a:hover {
+        border-bottom: 5px solid gray !important;
+    }
+
+     /* Homepage CSS */
+     .carousel-caption {
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+     }
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+@media (min-device-width:1200px) {
+    /*Global CSS*/
+    .navbar {
+        height: 6em;
+        overflow: hidden;
+    }
+
+    /* Products CSS */
+     .sofa-item-links-left {
+        float: left;
+    }
+
+    .sofa-item-links-right {
+        float: right;
+    }
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+/*Global CSS*/
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"]
-{
-    width: 100%;
+a, a:hover, a:visited {
+    color: #333;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-  /* Hide captions */
-  .carousel-caption {
-    display: none
-  }
+.subsection a, .subsection a:hover, .subsection a:visited {
+    text-decoration: underline;
+}
+
+.footer a, .footer a:hover, .footer a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C25462 !important;
+}
+
+ol li {
+    font-size: 2.5em !important;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+.navbar {
+    font-size: 1.2em !important;
+    transition: background 0.15s;
+    transition: border-bottom 0.15s;
+    transition: color 0.15s; 
+}
+
+.navbar-header .brand {
+    font-size: 1.3em;
+}
+
+.nav li a {
+    margin: 0 2px 3px 2px;
+    background: transparent;
+    transition: border-bottom 0.15s; 
+    transition: padding-bottom 0.15s; 
+}
+
+.nav li a:hover {
+    color: rgba(194, 84, 98, 1) !important;
+}
+
+.navbar-default .navbar-nav > .inactive > a {
+    padding-bottom: 1.4em;
+}
+
+.navbar-default .navbar-nav > .inactive > a:hover {
+    border-bottom: 5px solid #C25462;
+    padding-bottom: 1.09em;
+}
+
+.subsection {
+    margin-top: 1.2em;
+    border: 5px solid #333;
+    background-color: #EDE9DD;
+}
+
+.page-header {
+    text-align: center;
+    padding: 1.2em;
+}
+
+.highlight-text {
+    color: #C25462;
+}
+
+.footer {
+    background-color: #EDE9DD;
+    border-top: 5px solid black;
+    padding: 0.4em 0 0.7em 0;
+    text-align: center;
+}
+
+/* Homepage CSS */
+
+.home-statement {
+    background-color: #EDE9DD;
+    text-align: center;
+    border-top: 5px solid black;
+}
+
+.btn-slide {
+    color: white;
+    background: transparent;
+    transition: background 0.15s;
+    padding: 1em 1.3em;
+}
+
+.btn-slide:hover {
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 1px solid white;
+    color: white;
+}
+
+/* Products CSS */
+.sofa-item {
+    padding: 1.4em 0;
+}
+
+.sofa-item-info {
+    padding-top: 2em;
+}
+
+.sofa-item-info h3 {
+    margin: 0;
 }
